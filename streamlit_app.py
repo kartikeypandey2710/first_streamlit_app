@@ -1,5 +1,10 @@
 import pandas
 import streamlit
+import requests
+
+streamlit.header("Fruityvice Fruit Advice!")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
 streamlit.title("My Mom's New Healthy Dinner")
 streamlit.header("Breakfast Favorites")
 streamlit.text("🥣 Omega 3 and Blueberry Oatmeal")
